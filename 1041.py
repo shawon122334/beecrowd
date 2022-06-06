@@ -1,11 +1,10 @@
 x,y = map(float,(input().split()))
-q1 = +x,+y
-q2 = -x,+y
-q3 = -x , -y
-q4 = +x,-y
+if x==0:
+    print('Origem') if y==0 else print("Eixo Y")
 
-if x==0 and y==0:
-    print("Origem")
-elif x ==0 or y==0:
-     
-
+elif y==0:
+    print('Origem') if x==0 else print("Eixo X") 
+elif x>0:
+    print('Q1') if y>0 else print('Q4')
+elif x<0:
+    print('Q2') if y>0 else print('Q3')
